@@ -1,5 +1,9 @@
 # syvkristine.github.io
 
+- add
+- commit
+- push
+
 
 - cd = change directory
 - touch "filnavn" = ny fil 
