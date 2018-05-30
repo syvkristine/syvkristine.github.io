@@ -1,8 +1,28 @@
 * {
     box-sizing: border-box;
+    outline: none;
 }
 
 body {
     font-family: 'Comfortaa', cursive;
     text-align: center;
 }
+
+
+a {
+
+    color: gray;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+a:hover {
+
+    color: rgb(224, 202, 141);
+    cursor: pointer;
+    box-shadow: 0px 0px 1px 1px black;
+
+}
+
+
+
