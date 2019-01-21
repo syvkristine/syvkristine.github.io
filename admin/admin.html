@@ -10,23 +10,55 @@
 <body>
     <a href="../index.html">Tilbake</a>
     <main>
-        <div id="editor">
-            <h1>skriv</h1>
-        </div>
-        
-        <section>
-            <button id="btn">Publiser</button>
+        <section class="section1-BildeOpplasting">
+            <h1>Last opp nye prosjekter</h1>
+                <form id="skjemaBilder">
+                    <label for="inpBilde" class="button">Velg bildet</label>
+                        <input type="file" id="inpBilde">
+                        <span id="infoBilde"></span>
+                        <input type="text" id="inpTekst" required placeholder="Beskrivelse til bildet">
+                    <button class="button" type="submit">Last opp bilde</button>
+                </form>
+
+                <div class="callout success" id="bildecontainer">
+                    <p id="infoOpplasting">Ingen bilder lastet opp ennå</p>
+                    <div id="ulBilder"></div>
+                </div>
+
+                <select>
+                    <option>Velg palett</option>
+                    <option data-bakgrunn="darkorange">Orange theme</option>
+                </select>
         </section>
 
-        <div id="preview">
-
-        </div>
-    
+        <section class="innholdTilProsjektet">
+                <h1>Hva handler dette prosjektet om</h1>
+                <form id="skjemaInfo">
+                    <input type="text" id="inpTittel" placeholder="Tittel på prosjektet" required>
+                    <textarea id="taBeskrivelse" placeholder="Beskrivelse av prosjektet"></textarea>
+                    <button class="button" type="submit">Publiser prosjektet</button>
+                </form>
+        </section>
     </main> 
         
     <!-- Her gikk jeg inn på ckeditor og tok ckeditor 5 , valgte balloon og kopierte linken inn her -->
     <script src="https://cdn.ckeditor.com/ckeditor5/11.2.0/balloon/ckeditor.js"></script>
-       
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyDGiXBXjdSyNKhK6FAkOCI_L91GhMTyPp8",
+        authDomain: "portfolio-a6ec0.firebaseapp.com",
+        databaseURL: "https://portfolio-a6ec0.firebaseio.com",
+        projectId: "portfolio-a6ec0",
+        storageBucket: "portfolio-a6ec0.appspot.com",
+        messagingSenderId: "183671780214"
+    };
+    firebase.initializeApp(config);
+    </script>
+        
     <script src="admin.js"></script>
 </body>
 </html>
