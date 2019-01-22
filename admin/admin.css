@@ -1,0 +1,90 @@
+
+
+html, body {
+
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    background-color: #646464;
+    color: #eee;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+nav {
+
+    padding-top: 2.5rem;
+    padding-left: 3rem; 
+
+}
+
+nav a {
+
+    text-decoration: none;
+    color: white;
+    transition: .5s;
+
+}
+
+nav a:hover {
+
+    color: #B074B2;
+    
+} 
+
+
+main {
+
+    margin-top: 10rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+
+.innholdTilProsjektet input {
+
+    height: 3rem;
+    width: 28rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+
+}
+
+.innholdTilProsjektet textarea {
+
+    height: 15rem;
+    width: 38rem;
+    border-radius: 6px;
+
+}
+
+
+
+
+.bildeOpplasting .button {
+
+    background-color: #eee;
+    color: black;
+    border-radius: 20px;
+    padding: .5rem;
+    cursor: pointer;
+    transition: .5s;
+
+}
+
+
+.bildeOpplasting .button:hover {
+
+    box-shadow: 1px 2px 30px black;
+    
+}
+
+#inpBilde{
+
+    display: none;
+
+}
