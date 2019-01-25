@@ -35,12 +35,13 @@ nav a:hover {
 
 main {
 
-    margin-top: 10rem;
+    margin-top: 7rem;
+    margin-bottom: 2rem;
     padding-left: 2rem;
     padding-right: 2rem;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-gap: 10rem;
 }
 
 
@@ -48,9 +49,11 @@ main {
 .innholdTilProsjektet input {
 
     height: 3rem;
-    width: 28rem;
+    width: 38rem;
     border-radius: 6px;
     margin-bottom: 1rem;
+    padding-left: .5rem;
+    font-size: 1rem;
 
 }
 
@@ -59,27 +62,59 @@ main {
     height: 15rem;
     width: 38rem;
     border-radius: 6px;
+    padding-left: .5rem;
+    padding-top: 1rem;
+    font-size: 1rem;
+    margin-bottom: 5rem;
+    
+
+}
+.innholdTilProsjektet .button {
+
+    background-color: #eee;
+    color: black;
+    border-radius: 25px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: .5s;
+    font-size: 1rem;
 
 }
 
+.innholdTilProsjektet .button:hover {
+
+    background-color: rgb(197, 197, 197);
+    
+}
 
 
+.bildeOpplasting input {
+
+    height: 3rem;
+    width: 28rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    padding-left: .5rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
 
 .bildeOpplasting .button {
 
     background-color: #eee;
     color: black;
-    border-radius: 20px;
+    border-radius: 25px;
     padding: .5rem;
     cursor: pointer;
     transition: .5s;
+    padding: 1rem;
+    font-size: 1rem;
 
 }
 
-
 .bildeOpplasting .button:hover {
 
-    box-shadow: 1px 2px 30px black;
+    background-color: rgb(197, 197, 197);
     
 }
 
@@ -88,3 +123,31 @@ main {
     display: none;
 
 }
+
+
+#fjernTegn {
+
+    width: 5%;
+
+}
+
+
+#overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    /* display: flex; */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+#overlay img {
+    width: 64px;
+}
+

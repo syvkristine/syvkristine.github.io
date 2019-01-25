@@ -12,6 +12,8 @@ const skjemaInfo = document.querySelector("#skjemaInfo");
 const inpTittel = document.querySelector("#inpTittel");
 const taBeskrivelse = document.querySelector("#taBeskrivelse");
 
+//const img = document.createElement("img");
+
 
 // Henter database 
 const db = firebase.database();
@@ -44,7 +46,9 @@ function bytesToSize(bytes) {
     const bytes = bilde.size;
     const storrelse = bytesToSize(bytes);
 
+
     infoBilde.innerText = filnavn + " " + storrelse;
+
 
  }
  
@@ -62,13 +66,25 @@ function lastOppBilde(evt){
     .then( opplastetBilde => opplastetBilde.ref.getDownloadURL() )
     .then ( url => {
         bilderSomSkalLastesOpp.push({
+
             url: url,
             tekst: inpTekst.value
+
         });
-        console.log(bilderSomSkalLastesOpp);
+
+        overlay.style.display = "none";
     
         const div = document.createElement("div");
+        div.innerHTML = `
+            
+        <div>
+            <img id="fjernTegn" src="../img/remove-icon.png">
+            <span>${filnavn}</span>
+        </div>
+        
+        `;
         ulBilder.appendChild( div );
+
         div.animate([
             { transform: "translateX(-300px)" },
             { transform: "translateX(0)" }
@@ -140,14 +156,11 @@ skjemaInfo.addEventListener("submit", lagreProsjekt);
 
 
 
+/* 
 
-
-
-
-
-
-
-
+    img.src = "../img/remove-icon.png";
+    const src = document.getElementById("#fjernTegn");
+    src.appendChild(img);*/ 
 
 
 /*
