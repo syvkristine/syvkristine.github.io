@@ -151,3 +151,16 @@ main {
     width: 64px;
 }
 
+#ulBilder > div {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    grid-gap: 1rem;
+    
+}
+
+#ulBilder > div > img {
+
+    cursor: pointer;
+
+}

@@ -12,6 +12,8 @@ const skjemaInfo = document.querySelector("#skjemaInfo");
 const inpTittel = document.querySelector("#inpTittel");
 const taBeskrivelse = document.querySelector("#taBeskrivelse");
 
+const overlay = document.querySelector("#overlay");
+
 //const img = document.createElement("img");
 
 
@@ -24,7 +26,7 @@ const storage = firebase.storage();
 const prosjekter = db.ref("testprosjekter");
 
 // en array som lagrer bildene som skal sendes til databasen
-const bilderSomSkalLastesOpp = [];
+let bilderSomSkalLastesOpp = [];
 
 
 // regne om fil størrelsen på bildene i en mer brukevenlig funksjon
@@ -51,6 +53,18 @@ function bytesToSize(bytes) {
 
 
  }
+
+ function fjern(url) {
+     // Fjerner bilde fra arrayet
+     let nyttArray = bilderSomSkalLastesOpp.filter(bilde => bilde.url != url);
+     bilderSomSkalLastesOpp = nyttArray;
+
+     console.log(bilderSomSkalLastesOpp);
+
+    const divSomSkalFjernes = document.getElementById(url);
+
+     ulBilder.removeChild(divSomSkalFjernes);
+ }
  
 
  // Lster opp et bilde til storage og lagrer url og info i arrayet
@@ -58,9 +72,13 @@ function lastOppBilde(evt){
 
     evt.preventDefault();
 
+
+    // Starter opplasting
+    overlay.style.display = "flex";
+
     const bilde = inpBilde.files[0];
     const filnavn = bilde.name;
-    const lagringsPlass = storage.ref("mineBilder" + new Date() + bilde.filnavn);
+    const lagringsPlass = storage.ref("mineBilder" + (+new Date()) + bilde.filnavn);
 
     lagringsPlass.put(bilde)
     .then( opplastetBilde => opplastetBilde.ref.getDownloadURL() )
@@ -74,15 +92,12 @@ function lastOppBilde(evt){
 
         overlay.style.display = "none";
     
-        const div = document.createElement("div");
-        div.innerHTML = `
-            
-        <div>
-            <img id="fjernTegn" src="../img/remove-icon.png">
+        const div = document.createElement("div");        
+        div.innerHTML = `            
             <span>${filnavn}</span>
-        </div>
-        
+            <img onclick="fjern('${url}')" id="fjernTegn" src="../img/remove-icon.png">
         `;
+        div.id = url;
         ulBilder.appendChild( div );
 
         div.animate([
