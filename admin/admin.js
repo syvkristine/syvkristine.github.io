@@ -64,6 +64,8 @@ function bytesToSize(bytes) {
     const divSomSkalFjernes = document.getElementById(url);
 
      ulBilder.removeChild(divSomSkalFjernes);
+
+     
  }
  
 
