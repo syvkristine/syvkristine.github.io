@@ -3,23 +3,29 @@ html, body {
     padding: 0;
     margin: 0;
     font-size: 100%;
-    background-color: #646464;
-    color: #eee;
+    /*background-color: #5a5a5a; */
+    /*background: linear-gradient(to bottom, rgb(90,90,90) 0%,rgb(76,76,76) 100%);*/
+    background: linear-gradient(45deg, rgba(100,100,100,1) 0%,rgba(48,48,48,1) 100%);
+    color: #9C9C9C;
     font-family: 'Montserrat', sans-serif;
+    
+   
 }
-
 
 nav {
 
     padding-top: 2.5rem;
-    padding-left: 3rem; 
+    padding-left: 3rem;
+    display: grid; 
+    grid-template-columns: 1fr 150px 150px;
+    grid-gap: 3rem;
 
 }
 
 nav a {
 
     text-decoration: none;
-    color: white;
+    color: #9C9C9C;
     transition: .5s;
     padding-right: 4rem;
 
@@ -31,20 +37,19 @@ nav a:hover {
     
 } 
 
-.omMeg {
+.portefølje {
 
-    margin: 10rem 3rem 10rem 3rem; 
-   
-
+    margin-top: 20rem;
 }
 
-.framVisningBakgrun {
+.tidsLinje {
 
-    width: 650px;
-    height: 650px;
-    transform: translateX(1rem) rotate(45deg);
-    border-radius: 25px;
-
+    width: 2px;
+    height: 1000px;
+    background: linear-gradient(to bottom, rgba(216,216,216,1) 0%,rgba(100,100,100,1) 100%);
+    position: relative;
+    z-index: 1;
+    margin: auto;
 }
 
 h1 {
@@ -54,9 +59,29 @@ h1 {
     font-weight: 500;
 }
 
+h2 {
+
+    font-size: 1.5rem;
+}
+
+p {
+
+    font-size: 1.1rem;
+}
+
+.framVisningBakgrun {
+
+    width: 650px;
+    height: 650px;
+    transform: translateX(1rem) rotate(45deg);
+    border-radius: 80px;
+
+}
+
 .s1 {
     
-    height: 1000px;
+    margin-top: 50rem;
+    min-height: 1000px;
 }
 
 
@@ -64,24 +89,105 @@ h1 {
 
     border: 3px solid #6FACDD;
     margin-top: 10rem;
-    transform: translateX(1rem) rotate(45deg);
+    transform: translateX(-10rem) rotate(45deg);
+    position: relative;
    
 }
 
+.s1 .beskrivelseAvProsjekt {
+
+    position: absolute;
+    max-width: 400px;
+    left: 3rem;
+    margin-top: 13rem;
+
+}
+
+.s2 {
+
+    min-height: 1000px;
+    overflow: hidden;
+}
 
 .s2 .framVisningBakgrun {
 
-    background-color: rgb(0, 0, 0);
-    grid-column-start: 2;
-    grid-column-end: 2;
-    transform: translateX(5rem) rotate(45deg);
+    border: 3px solid #DDBF6F;
+    margin-top: 10rem;
+    transform: translateX(50rem) rotate(45deg);
+    position: relative;
+
+}
+
+.s2 .beskrivelseAvProsjekt {
+
+    position: absolute;
+    max-width: 400px;
+    left: 60rem;
+    margin-top: 20rem;
+
+}
+
+.s2 .beskrivelseAvProsjekt p {
+
+   justify-content: right;
+
+}
+
+.s3 {
+
+    min-height: 1000px;
 
 }
 
 .s3 .framVisningBakgrun {
 
-    background-color: #DDBF6F;
-    transform: translateX(1rem) rotate(45deg);
+    position: relative;
+    border: 3px solid #E19728;;
+    margin-top: 10rem;
+    transform: translateX(-10rem) rotate(45deg);
 
+}
+
+.s3 .beskrivelseAvProsjekt {
+
+    position: absolute;
+    max-width: 400px;
+    left: 3rem;
+    margin-top: 13rem;
+    
+
+}
+
+.s4 {
+
+    border: 1px solid #9C9C9C;
+    border-radius: 250px;
+    padding: 100px;
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    margin-bottom: 10rem;
+
+}
+
+.omMeg {
+
+    text-align: center;
+    color: white;
+    margin-top: 15rem;
+    
+}
+
+.omMeg h3 {
+
+    margin: 0;
+    font-size: 1.5rem
+    
+}
+
+.omMeg p {
+
+    margin: 0;
+    
 }
 
