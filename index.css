@@ -3,13 +3,10 @@ html, body {
     padding: 0;
     margin: 0;
     font-size: 100%;
-    /*background-color: #5a5a5a; */
-    /*background: linear-gradient(to bottom, rgb(90,90,90) 0%,rgb(76,76,76) 100%);*/
     background: linear-gradient(45deg, rgba(100,100,100,1) 0%,rgba(48,48,48,1) 100%);
     color: #9C9C9C;
     font-family: 'Montserrat', sans-serif;
     
-   
 }
 
 nav {
@@ -37,21 +34,17 @@ nav a:hover {
     
 } 
 
-.portefølje {
-
-    margin-top: 20rem;
-}
-
 .tidsLinje {
 
     width: 2px;
-    height: 1000px;
-    background: linear-gradient(to bottom, rgba(216,216,216,1) 0%,rgba(100,100,100,1) 100%);
+    height: 3700px;
+    background: linear-gradient(to bottom,rgba(116, 116, 116, 0.712) 0%,rgba(100, 100, 100, 0.712) 100%);
     position: relative;
     z-index: 1;
     margin: auto;
+    
 }
-
+/*felles for alle på helesiden*/
 h1 {
  
     text-align: center;
@@ -60,6 +53,16 @@ h1 {
 }
 
 h2 {
+ 
+    font-size: 2rem;
+    font-weight: 400;
+    position: absolute;
+    transform: rotate(-90deg);
+    /*top: 80px;
+    left: 650px;*/
+}
+
+h3 {
 
     font-size: 1.5rem;
 }
@@ -71,71 +74,185 @@ p {
 
 .framVisningBakgrun {
 
-    width: 650px;
-    height: 650px;
-    transform: translateX(1rem) rotate(45deg);
+    width: 550px;
+    height: 550px;
+    transform: translateX(-18rem) translateY(-22rem) rotate(45deg);
     border-radius: 80px;
+    border: 3px solid #6FACDD; 
 
 }
 
+.portefølje {
+
+    margin-top: 20rem;
+
+}
+
+
+
+/*section 1*/
+
+
+.wrapper {
+
+    height: 100vh;
+    width: 100vw;
+
+    display: grid;
+    grid-template-columns: 300px 5px auto;
+    grid-gap: 17rem;
+    position: absolute;
+    top: 1000px;
+    justify-content: center;
+    align-content: center;
+
+
+
+
+   /*grid-template-columns: 500px 100px auto;*/
+    /*align-items: center;*/
+    /* justify-items: center; */
+ 
+    
+
+}
+
+
+.beskrivelseAvProsjekt h3 {
+
+    padding-top: 15rem;
+
+}
+
+
+
+
+
+/*
+#secProsjekter > div:nth-child(1) {
+    
+    position: absolute;
+    top: 1000px;
+    display: flex;
+    /*grid-template-columns: 1fr 1fr;
+    flex-direction: row;
+}
 .s1 {
     
-    margin-top: 50rem;
-    min-height: 1000px;
+    position: absolute;
+    top: 1000px;
+
+    display: flex;
+    /*grid-template-columns: 1fr 1fr;
+    flex-direction: row;
+
 }
 
 
-.s1 .framVisningBakgrun {
+.s1 h2 {
+    
+    margin-top: 10rem;
+    margin-left: 41rem
+
+}
+
+
+
+#secProsjekter > div:nth-child(1) h2 {
+    margin-top: 10rem;
+    margin-left: 41rem
+}
+
+
+#secProsjekter > div:nth-child(1) .framVisningBakgrun {
 
     border: 3px solid #6FACDD;
     margin-top: 10rem;
     transform: translateX(-10rem) rotate(45deg);
     position: relative;
-   
+  
 }
 
-.s1 .beskrivelseAvProsjekt {
+#secProsjekter > div:nth-child(1) .beskrivelseAvProsjekt {
 
     position: absolute;
     max-width: 400px;
     left: 3rem;
-    margin-top: 13rem;
+    margin-top: 22rem;
 
 }
 
-.s2 {
+#secProsjekter > div:nth-child(1) img {
 
-    min-height: 1000px;
-    overflow: hidden;
+    padding-left: 13rem;
+    padding-top: 8rem;
+    width: 60%;
+
 }
 
-.s2 .framVisningBakgrun {
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#secProsjekter > div:nth-child(2) {
+   
+    /*overflow: hidden;*/
+    position: absolute;
+    top: 2000px;
+
+}
+
+#secProsjekter > div:nth-child(2) .framVisningBakgrun {
 
     border: 3px solid #DDBF6F;
     margin-top: 10rem;
-    transform: translateX(50rem) rotate(45deg);
+    transform: translateX(53rem) rotate(45deg);
     position: relative;
 
 }
 
-.s2 .beskrivelseAvProsjekt {
+#secProsjekter > div:nth-child(2) .beskrivelseAvProsjekt {
 
     position: absolute;
-    max-width: 400px;
+    width: 400px;
     left: 60rem;
-    margin-top: 20rem;
+    margin-top: 24rem;
 
 }
 
-.s2 .beskrivelseAvProsjekt p {
 
-   justify-content: right;
+#secProsjekter > div:nth-child(2) h2 {
+    
+    margin-top: 10rem;
+    margin-left: 45rem
+
+}
+
+#secProsjekter > div:nth-child(2) .eggTimerFramvisning img {
+
+    padding-left: 13rem;
+    padding-top: 8rem;
+    width: 60%;
 
 }
 
 .s3 {
 
-    min-height: 1000px;
+    position: absolute;
+    top: 3000px;
 
 }
 
@@ -153,7 +270,7 @@ p {
     position: absolute;
     max-width: 400px;
     left: 3rem;
-    margin-top: 13rem;
+    margin-top: 22rem;
     
 
 }
@@ -178,7 +295,7 @@ p {
     
 }
 
-.omMeg h3 {
+.omMeg h4 {
 
     margin: 0;
     font-size: 1.5rem
