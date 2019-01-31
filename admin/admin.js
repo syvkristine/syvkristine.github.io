@@ -13,6 +13,8 @@ const inpTittel = document.querySelector("#inpTittel");
 const taBeskrivelse = document.querySelector("#taBeskrivelse");
 
 const overlay = document.querySelector("#overlay");
+const overlayBekreftelse = document.querySelector("#overlayBekreftelse");
+
 
 //const img = document.createElement("img");
 
@@ -65,6 +67,9 @@ function bytesToSize(bytes) {
 
      ulBilder.removeChild(divSomSkalFjernes);
 
+     infoOpplasting.style.color = "#9C9C9C";
+
+     infoOpplasting.innerText = `Ingen bilder lastet opp`;
      
  }
  
@@ -73,6 +78,8 @@ function bytesToSize(bytes) {
 function lastOppBilde(evt){
 
     evt.preventDefault();
+
+    
 
 
     // Starter opplasting
@@ -97,7 +104,7 @@ function lastOppBilde(evt){
         const div = document.createElement("div");        
         div.innerHTML = `            
             <span>${filnavn}</span>
-            <img onclick="fjern('${url}')" id="fjernTegn" src="../img/remove-icon.png">
+            <img onclick="fjern('${url}')" id="fjernTegn" src="../img/remove-icon.svg">
         `;
         div.id = url;
         ulBilder.appendChild( div );
@@ -113,6 +120,9 @@ function lastOppBilde(evt){
         }
 
         infoOpplasting.innerText = `${bilderSomSkalLastesOpp.length} ${tekst} er lastet opp`;
+
+        infoOpplasting.style.color = "rgb(100, 141, 87)";
+
         
 
     } );
@@ -140,7 +150,13 @@ function lagreProsjekt(evt) {
     skjemaBilder.reset();
     skjemaInfo.reset();
 
+    overlayBekreftelse.style.display = "flex";
+
+
 }
+
+//spør hvordan jeg kan få til dette med at den viser seg litt og blir borte igjen etter så så lang tid. 
+    overlayBekreftelse.style.display = "none";
 
 
 

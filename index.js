@@ -9,13 +9,15 @@ const prosjekter = db.ref("testprosjekter");
 let ypos = 0;
 
 
+
 function visProsjekt(snap) {
 
     const prosjekt = snap.val();
     ypos += 1000;
 
+
     secProsjekter.innerHTML += `
-         <div class="wrapper" style="top: ${ypos}px">
+            <div class="wrapper1" style="top: ${ypos}px">
                 <div class="beskrivelseAvProsjekt">
                     <h3>${prosjekt.tittel}</h3>
                     <p>${prosjekt.beskrivelse}</p>
@@ -27,7 +29,7 @@ function visProsjekt(snap) {
                 <div class="framvisningAvprosjekt">
                     <img src="${prosjekt.bilder[0].url}" alt="${prosjekt.bilder[0].tekst}">
                 </div>
-            </div>    
+            </div>   
     `;
     
 }

@@ -6,6 +6,7 @@ html, body {
     background: linear-gradient(45deg, rgba(100,100,100,1) 0%,rgba(48,48,48,1) 100%);
     color: #9C9C9C;
     font-family: 'Montserrat', sans-serif;
+    user-select: none;
     
 }
 
@@ -33,6 +34,8 @@ nav a:hover {
     color: #B074B2;
     
 } 
+
+
 
 .tidsLinje {
 
@@ -76,9 +79,8 @@ p {
 
     width: 550px;
     height: 550px;
-    transform: translateX(-18rem) translateY(-22rem) rotate(45deg);
     border-radius: 80px;
-    border: 3px solid #6FACDD; 
+   
 
 }
 
@@ -92,35 +94,69 @@ p {
 
 /*section 1*/
 
+.wrapper1 {
 
-.wrapper {
+    margin-left: 5%;
+    margin-right: 5%;
+}
 
-    height: 100vh;
-    width: 100vw;
+#secProsjekter > div:nth-child(1) {
 
+    /*height: 100vh;
+    width: 100vw;*/
     display: grid;
-    grid-template-columns: 300px 5px auto;
-    grid-gap: 17rem;
-    position: absolute;
-    top: 1000px;
+   /* grid-template-columns: repeat(3, 45vmin);*/
+    /* grid-template-rows: repeat(3,100vmin); */
+    grid-template-columns: 350px 100px 1fr;
+    grid-gap: 12rem;
     justify-content: center;
     align-content: center;
 
-
-
-
-   /*grid-template-columns: 500px 100px auto;*/
-    /*align-items: center;*/
-    /* justify-items: center; */
- 
+    
+    position: absolute;
+    top: 1000px;
     
 
 }
 
 
-.beskrivelseAvProsjekt h3 {
+#secProsjekter > div:nth-child(1) .framVisningBakgrun {
 
-    padding-top: 15rem;
+    border: 3px solid #6FACDD; 
+   /* background-color: #6FACDD;*/
+    transform: translateX(-15rem) translateY(-18rem) rotate(45deg);
+    z-index: -1;
+    position: relative;
+    overflow: hidden;
+
+   
+  
+}
+
+
+#secProsjekter > div:nth-child(1) .beskrivelseAvProsjekt {
+
+    z-index: 5;
+
+
+}
+
+#secProsjekter > div:nth-child(1) h3 {
+
+    margin-top: 15rem;
+
+}
+
+#secProsjekter > div:nth-child(1) h2 {
+
+    padding-top: 6rem;
+  
+}
+
+
+#secProsjekter > div:nth-child(1) img {
+
+   
 
 }
 
@@ -196,20 +232,21 @@ p {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 #secProsjekter > div:nth-child(2) {
-   
-    /*overflow: hidden;*/
+   /*
+    /*overflow: hidden;
+    position: absolute;
+    top: 2000px;
+    */
+
+    display: grid;
+    grid-template-columns: 350px 100px 1fr;
+    flex-direction: row-reverse;
+    grid-gap: 8rem;
+    justify-content: center;
+    align-content: center;
+
+    
     position: absolute;
     top: 2000px;
 
@@ -219,35 +256,51 @@ p {
 
     border: 3px solid #DDBF6F;
     margin-top: 10rem;
-    transform: translateX(53rem) rotate(45deg);
+    transform: translateX(51rem) translateY(-29rem) rotate(45deg);
+    z-index: 1;
     position: relative;
+    overflow: hidden;
 
 }
 
 #secProsjekter > div:nth-child(2) .beskrivelseAvProsjekt {
-
+/*
     position: absolute;
     width: 400px;
     left: 60rem;
     margin-top: 24rem;
-
+*/
 }
 
 
 #secProsjekter > div:nth-child(2) h2 {
     
+    /*
     margin-top: 10rem;
     margin-left: 45rem
+    */
+
+    padding-top: 6rem;
 
 }
 
 #secProsjekter > div:nth-child(2) .eggTimerFramvisning img {
-
+/*
     padding-left: 13rem;
     padding-top: 8rem;
-    width: 60%;
+*/
 
+    width: 90%;
 }
+
+
+
+
+
+
+
+
+
 
 .s3 {
 
@@ -274,6 +327,12 @@ p {
     
 
 }
+
+
+
+
+
+/*hentes ikke fra database*/
 
 .s4 {
 

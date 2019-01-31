@@ -1,0 +1,41 @@
+
+
+html, body {
+
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    background-color: rgba(48,48,48,1);
+    color: #9C9C9C;
+    font-family: 'Montserrat', sans-serif;
+    user-select: none;
+}
+
+
+nav {
+
+    padding-top: 2.5rem;
+    padding-left: 3rem; 
+
+}
+
+nav a {
+
+    text-decoration: none;
+    color: #9C9C9C;
+    transition: .5s;
+
+}
+
+nav a:hover {
+
+    color: #B074B2;
+    
+} 
+
+
+main {
+
+    padding-top: 10rem;
+    text-align: center;
+}
