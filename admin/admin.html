@@ -20,6 +20,17 @@
                 <h1>Lag et nytt prosjekt i porteføljen</h1>
                 <form id="skjemaInfo">
                     <input type="text" id="inpTittel" placeholder="Tittel på prosjektet.." required>
+                    <input type="text" list="aarsliste" id="norLagetDuProsjektet" placeholder="Hvilket år er prosjektet laget.." required>
+                    <datalist id="aarsliste">
+                        <option value="2019"></option>
+                        <option value="2018"></option>
+                        <option value="2017"></option>
+                        <option value="2016"></option>
+                        <option value="2015"></option>
+                        <option value="2014"></option>
+                        <option value="2013"></option>
+                    </datalist>
+                    <input id="inpFarge" type="color" value="#eeeeee" placeholder="Velg farge">
                     <textarea id="taBeskrivelse" placeholder="Beskrivelse av prosjektet.."></textarea>
                     <button class="button" type="submit">Publiser prosjektet</button>
                 </form>
@@ -40,16 +51,11 @@
                     <div id="ulBilder"></div>
                 </div>
     
-                <!--<select>
-                    <option>Velg palett</option>
-                    <option data-bakgrunn="darkorange">Orange theme</option>
-                </select>-->
         </section>
 
     </main> 
     
     <div id="overlay">
-       <!-- <img src="../img/lg.dna-spin-spiral-preloader.gif">-->
        <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
     </div>
 
@@ -63,7 +69,6 @@
                 <div class="sa-fix"></div>
             </div>
         </div>
-
         <p>Innlegget er publisert!</p>
     </div>
         

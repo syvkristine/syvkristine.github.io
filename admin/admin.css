@@ -68,6 +68,10 @@ h1 {
 
 }
 
+.innholdTilProsjektet input[type=color] {
+  width: 20rem;
+}
+
 .innholdTilProsjektet textarea {
 
     height: 15rem;

@@ -14,6 +14,8 @@ const taBeskrivelse = document.querySelector("#taBeskrivelse");
 
 const overlay = document.querySelector("#overlay");
 const overlayBekreftelse = document.querySelector("#overlayBekreftelse");
+const norLagetDuProsjektet = document.querySelector("#norLagetDuProsjektet");
+const inpFarge = document.querySelector("#inpFarge");
 
 
 //const img = document.createElement("img");
@@ -63,6 +65,8 @@ function bytesToSize(bytes) {
 
      console.log(bilderSomSkalLastesOpp);
 
+     lagringsPlass.delete();        
+
     const divSomSkalFjernes = document.getElementById(url);
 
      ulBilder.removeChild(divSomSkalFjernes);
@@ -73,6 +77,7 @@ function bytesToSize(bytes) {
      
  }
  
+let lagringsPlass;
 
  // Lster opp et bilde til storage og lagrer url og info i arrayet
 function lastOppBilde(evt){
@@ -87,7 +92,7 @@ function lastOppBilde(evt){
 
     const bilde = inpBilde.files[0];
     const filnavn = bilde.name;
-    const lagringsPlass = storage.ref("mineBilder" + (+new Date()) + bilde.filnavn);
+    lagringsPlass = storage.ref("mineBilder" + (+new Date()) + bilde.filnavn);
 
     lagringsPlass.put(bilde)
     .then( opplastetBilde => opplastetBilde.ref.getDownloadURL() )
@@ -144,19 +149,29 @@ function lagreProsjekt(evt) {
     prosjekter.push({
         tittel: inpTittel.value, 
         beskrivelse: taBeskrivelse.value,
-        bilder: bilderSomSkalLastesOpp
+        bilder: bilderSomSkalLastesOpp,
+        aar: norLagetDuProsjektet.value, 
+        farge: inpFarge.value
     });
 
     skjemaBilder.reset();
     skjemaInfo.reset();
+    bilderSomSkalLastesOpp.length = 0;
+    ulBilder.innerHTML = "";
+    infoBilde.style.display = "none";
+    infoOpplasting.innerText = `Ingen bilder lastet opp`;
+    infoOpplasting.style.color = "rgb(100, 141, 87)";
 
     overlayBekreftelse.style.display = "flex";
 
+    setTimeout( () => {
+        overlayBekreftelse.style.display = "none";
+    }, 3000);
 
 }
 
-//spør hvordan jeg kan få til dette med at den viser seg litt og blir borte igjen etter så så lang tid. 
-    overlayBekreftelse.style.display = "none";
+//spør hvordan jeg kan få til dette med at den viser seg litsetog blir borte igjen etter så så lang tid. 
+    
 
 
 
