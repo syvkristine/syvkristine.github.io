@@ -251,6 +251,8 @@ p {
 .s4 {
 
     border: 1px solid #9C9C9C;
+    background-image: url("img/bildeAvMeg.png");
+    background-position: center;
     border-radius: 250px;
     padding: 100px;
     width: 250px;
@@ -265,6 +267,7 @@ p {
     text-align: center;
     color: white;
     margin-top: 15rem;
+    
     
 }
 

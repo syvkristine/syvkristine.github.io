@@ -36,7 +36,7 @@ nav a:hover {
 
 main {
 
-    margin-top: 7rem;
+    margin-top: 4rem;
     margin-bottom: 2rem;
     padding-left: 2rem;
     padding-right: 2rem;
@@ -62,7 +62,7 @@ h1 {
     margin-bottom: 1rem;
     padding-left: .5rem;
     font-size: 1rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     background-color:rgb(180, 180, 180);
     border: none;
 
@@ -74,13 +74,14 @@ h1 {
 
 .innholdTilProsjektet textarea {
 
-    height: 15rem;
+    height: 12rem;
     width: 38rem;
     border-radius: 6px;
     padding-left: .5rem;
     padding-top: 1rem;
     font-size: 1rem;
-    margin-bottom: 5rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
     background-color:rgb(180, 180, 180);
     border: none;
     
