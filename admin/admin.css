@@ -69,12 +69,12 @@ h1 {
 }
 
 .innholdTilProsjektet input[type=color] {
-  width: 20rem;
+  /*width: 20rem;*/
 }
 
 .innholdTilProsjektet textarea {
 
-    height: 12rem;
+    height: 9rem;
     width: 38rem;
     border-radius: 6px;
     padding-left: .5rem;
@@ -90,7 +90,7 @@ h1 {
 
 .innholdTilProsjektet .button {
 
-    background-color: rgb(197, 197, 197);
+    background-color: rgb(100, 141, 87);
     color: black;
     border-radius: 10px;
     border: none;
@@ -108,7 +108,7 @@ h1 {
 .innholdTilProsjektet .button:hover {
 
    
-    background-color: rgb(100, 141, 87);
+    background-color: rgb(83, 117, 72);
     border-radius: 15px;
     
 }

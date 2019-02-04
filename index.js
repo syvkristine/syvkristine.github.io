@@ -22,8 +22,8 @@ function visProsjekt(snap) {
     secProsjekter.innerHTML += `
             <div class="wrapper1" style="top: ${ypos}px">
                 <div class="beskrivelseAvProsjekt">
-                    <h3 data-aos="fade-up" data-aos-duration="5000">${prosjekt.tittel}</h3>
-                    <p data-aos="fade-up" data-aos-duration="5000" >${prosjekt.beskrivelse}</p>
+                    <h3 data-aos="fade-up" data-aos-duration="6000">${prosjekt.tittel}</h3>
+                    <p data-aos="fade-up" data-aos-duration="6000" >${prosjekt.beskrivelse}</p>
                     <figure data-aos="zoom-in" data-aos-duration="2000" class="framVisningBakgrun" style="border-color: ${prosjekt.farge}"></figure>
                 </div>
                 <div>
