@@ -1,3 +1,5 @@
+
+
 const secProsjekter = document.querySelector("#secProsjekter");
 const tidsLinje = document.querySelector(".tidsLinje");
 

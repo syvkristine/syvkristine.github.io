@@ -227,9 +227,6 @@ p {
 
 }
 
-
-
-
 .wrapper1:nth-child(even) > div:nth-child(1) {
     
     order: 3;
