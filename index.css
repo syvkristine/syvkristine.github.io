@@ -1,10 +1,10 @@
 html, body {
 
+    background-color: #EEEEEE;
     padding: 0;
     margin: 0;
     font-size: 100%;
-    background: linear-gradient(45deg, rgba(100,100,100,1) 0%,rgba(48,48,48,1) 100%);
-    color: #9C9C9C;
+    color: black;
     font-family: 'Montserrat', sans-serif;
     user-select: none;
     
@@ -30,7 +30,7 @@ nav {
 nav a {
 
     text-decoration: none;
-    color: #9C9C9C;
+    color: black;
     transition: .5s;
     padding-right: 4rem;
 
@@ -42,15 +42,13 @@ nav a:hover {
     
 } 
 
-
-
 .tidsLinje {
 
     width: 2px;
     height: 3700px;
-    background: linear-gradient(to bottom,rgba(116, 116, 116, 0.712) 0%,rgba(100, 100, 100, 0.712) 100%);
-    position: relative;
-    z-index: 1;
+    background: rgba(156, 156, 156, 0.137);
+    /* position: relative; */
+    /* z-index: 1; */
     margin: auto;
     
 }
@@ -66,7 +64,7 @@ h2 {
  
     font-size: 2rem;
     font-weight: 400;
-    position: relative;
+    
     transform: rotate(-90deg);
 
 }
@@ -101,29 +99,53 @@ p {
     margin-left: 5%;
     margin-right: 5%;
     transition: 1s;
+    opacity: .99;
+      
 }
+
 
 #secProsjekter > div:nth-child(odd) {
 
-
-    display: grid;
-    grid-template-columns: 350px 100px 1fr;
-    grid-gap: 12rem;
-    justify-content: center;
-    align-content: center;
-
-    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* grid-template-columns: 350px 100px 1fr; */
+    /* grid-gap: 12rem; */
+    /* justify-content: center; */
+    /* align-content: center; */
     position: absolute;
-    top: 1000px;
+    /* top: 1000px; */
 
 }
 
+/*
+
+#secProsjekter > div:nth-child(odd) {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        /* grid-template-columns: 350px 100px 1fr; */
+        /* grid-gap: 12rem; */
+        /* justify-content: center; */
+        /* align-content: center; 
+        position: absolute;
+        /* top: 1000px; 
+
+}
+ 
+*/
+
+
 #secProsjekter > div:nth-child(odd) .framVisningBakgrun {
 
-    border: 3px solid #6FACDD; 
+   /* border: 3px solid #6FACDD; */
+    background-color: #6FACDD;
     transform: rotate(45deg);
-    left: -168px;
-    top: -360px;
+    left: -271px;
+    top: -140px;
     z-index: -1;
     position: relative;
    
@@ -132,27 +154,27 @@ p {
 
 #secProsjekter > div:nth-child(odd) .beskrivelseAvProsjekt {
 
-    z-index: 5;
+    max-width: 600px;
 
 }
 
 
 #secProsjekter > div:nth-child(odd) h3 {
 
-    margin-top: 15rem;
+
 }
 
 #secProsjekter > div:nth-child(odd) h2 {
-
+/*
     top: -50px;
     left: 32px;
-  
+  */
 }
 
 .wrapper1:nth-child(odd) img {
 
-    width: 100%;
-    margin-top: 12rem;
+ 
+  
 
 }
 
@@ -161,16 +183,21 @@ p {
 
 /*her begynner section 2 / speilvent */
 
-#secProsjekter > div:nth-child(even) {
+#secProsjekter > div:nth-child(2) {
 
-    display: grid;
-    grid-template-columns: 1fr 100px 350px;
-    grid-gap: 8rem;
-    justify-content: center;
-    align-content: center;
 
-    
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    /* grid-template-columns: 350px 100px 1fr; */
+    /* grid-gap: 12rem; */
+    /* justify-content: center; */
+    /* align-content: center; */
     position: absolute;
+    /* top: 1000px; */
+
     top: 2000px;
    
 
@@ -229,20 +256,21 @@ p {
 
 .wrapper1:nth-child(even) > div:nth-child(1) {
     
-    order: 3;
+    order: 2;
     
 }
 .wrapper1:nth-child(even) > div:nth-child(2) {
     
-    order: 2;
+    order: 1;
     
 }
+/*
 .wrapper1:nth-child(even) > div:nth-child(3) {
     
     order: 1;
     
 }
-
+*/
 
 /*hentes ikke fra database*/
 
