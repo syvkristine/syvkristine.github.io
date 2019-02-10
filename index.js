@@ -27,15 +27,16 @@ function visProsjekt(snap) {
                     <h3 data-aos="fade-up" data-aos-duration="6000">${prosjekt.tittel}</h3>
                     <p data-aos="fade-up" data-aos-duration="6000" >${prosjekt.beskrivelse}</p>
                 </div>
-                <div class="framvisningAvprosjekt">
-                    <img  data-aos="fade-up" data-aos-duration="3000" src="${prosjekt.bilder[0].url}" alt="${prosjekt.bilder[0].tekst}">
-                </div>
-            </div> 
-            <div>
-            <figure data-aos="zoom-in" data-aos-duration="2000" class="framVisningBakgrun" style="background-color: ${prosjekt.farge}"></figure>
                 <div>
                     <h2>${prosjekt.aar}</h2>
                 </div>
+                <div class="framvisningAvprosjekt">
+                    <img  data-aos="fade-up" data-aos-duration="3000" src="${prosjekt.bilder[0].url}" alt="${prosjekt.bilder[0].tekst}">
+                </div>
+                
+            </div> 
+            <div>
+            <figure data-aos="zoom-in" data-aos-duration="2000" class="framVisningBakgrun" style="background-color: ${prosjekt.farge}"></figure>
             </div>   
     `;
     

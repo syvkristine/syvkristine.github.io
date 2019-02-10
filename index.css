@@ -106,7 +106,13 @@ p {
 
 #secProsjekter > div:nth-child(odd) {
 
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content: center;
+
+
+    /*
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
