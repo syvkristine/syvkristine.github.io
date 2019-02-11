@@ -1,6 +1,6 @@
 html, body {
 
-    background-color: #EEEEEE;
+    background-color: rgb(207, 207, 207);
     padding: 0;
     margin: 0;
     font-size: 100%;
@@ -81,9 +81,9 @@ p {
 
 .framVisningBakgrun {
 
-    width: 550px;
-    height: 550px;
-    border-radius: 80px;
+    width: 700px;
+    height: 700px;
+    border-radius: 100px;
    
 }
 
@@ -107,9 +107,17 @@ p {
 #secProsjekter > div:nth-child(odd) {
 
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 400px auto auto;
+    grid-gap: 9rem;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    left: 50%;
+    margin-left: -560px;
+    /* grid-gap: 12rem; */
+    /* justify-content: center; */
+    /* align-content: center; */
+
 
 
     /*
@@ -120,7 +128,7 @@ p {
     /* grid-gap: 12rem; */
     /* justify-content: center; */
     /* align-content: center; */
-    position: absolute;
+  /*  position: absolute;
     /* top: 1000px; */
 
 }
@@ -150,8 +158,8 @@ p {
    /* border: 3px solid #6FACDD; */
     background-color: #6FACDD;
     transform: rotate(45deg);
-    left: -271px;
-    top: -140px;
+    top: -47rem;
+    left: 53rem;
     z-index: -1;
     position: relative;
    
@@ -192,17 +200,14 @@ p {
 #secProsjekter > div:nth-child(2) {
 
 
-   
-    display: flex;
+    display: grid;
+    grid-template-columns: 400px auto auto;
+    grid-gap: 9rem;
     align-items: center;
-    justify-content: space-around;
-    flex-direction: row-reverse;
-    /* grid-template-columns: 350px 100px 1fr; */
-    /* grid-gap: 12rem; */
-    /* justify-content: center; */
-    /* align-content: center; */
+    justify-content: center;
     position: absolute;
-    /* top: 1000px; */
+    left: 50%;
+    margin-left: -560px;
 
     top: 2000px;
    
@@ -211,13 +216,14 @@ p {
 
 #secProsjekter > div:nth-child(even) .framVisningBakgrun {
 
-    border: 3px solid #DDBF6F;
+    background-color: #DDBF6F;
     top: -23rem;
     left: -7rem;
 
     transform: rotate(45deg);
     z-index: 1;
     position: relative;
+
     
 
 }
@@ -270,13 +276,12 @@ p {
     order: 1;
     
 }
-/*
+
 .wrapper1:nth-child(even) > div:nth-child(3) {
     
     order: 1;
     
 }
-*/
 
 /*hentes ikke fra database*/
 
@@ -316,3 +321,18 @@ p {
     
 }
 
+
+
+
+@media only screen and (max-width: 1200px) {
+
+    #secProsjekter > div:nth-child(odd) {
+
+        grid-template-rows: 1fr;
+       /* grid-gap: 9rem; */
+    
+    
+    }
+    
+
+}
