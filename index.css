@@ -1,338 +1,292 @@
-html, body {
 
-    background-color: rgb(207, 207, 207);
+html, 
+body {
+
     padding: 0;
     margin: 0;
+    background-color: white;
+    font-family: 'Montserrat Alternates', sans-serif;
     font-size: 100%;
     color: black;
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-    
-}
-
-body {
 
     overflow-y: scroll;
     overflow-x: hidden;
+   
+}
+
+
+a {
+
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
 
 }
 
-nav {
+a:hover {
 
-    padding-top: 2.5rem;
-    padding-left: 3rem;
-    display: grid; 
-    grid-template-columns: 1fr 150px 150px;
-    grid-gap: 3rem;
+  color: pink;
 
 }
 
-nav a {
+#menuToggle {
 
-    text-decoration: none;
-    color: black;
-    transition: .5s;
-    padding-right: 4rem;
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 72px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
 
 }
 
-nav a:hover {
+#menuToggle input {
 
-    color: #B074B2;
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span {
+
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: black;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+
+  transform-origin: 0% 0%;
+
+}
+
+#menuToggle span:nth-last-child(2) {
+
+  transform-origin: 0% 100%;
+
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span {
+
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3) {
+
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2) {
+
+  transform: rotate(-45deg) translate(0, -1px);
+
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+
+    overflow: hidden;  
+
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
     
-} 
+    background: white;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
 
-.tidsLinje {
+#menu li {
 
-    width: 2px;
-    height: 3700px;
-    background: rgba(156, 156, 156, 0.137);
-    /* position: relative; */
-    /* z-index: 1; */
-    margin: auto;
+  padding: 30px 0;
+  font-size: 22px;
+
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul {
+
+  transform: none;
+
+}
+
+
+
+
+
+
+
+
+
+
+.s1 {
+
+    margin-top: 20rem;
+    height: 500px;
+    padding-left: 5%;
+    /*top: 350px;*/
+  
     
 }
-/*felles for alle på helesiden*/
-h1 {
- 
-    text-align: center;
-    font-size: 3rem;
-    font-weight: 500;
+
+.s1 h1 {
+
+    font-weight: 300;
+    font-size: 3.5rem;
+    margin: 0;
+
+}
+
+
+.s1 p {
+
+    font-size: 1rem;
+    font-weight: 300;
+    width: 500px;
+
 }
 
 h2 {
- 
-    font-size: 2rem;
-    font-weight: 400;
-    
-    transform: rotate(-90deg);
 
-}
-
-h3 {
-
-    font-size: 1.5rem;
-}
-
-p {
-
-    font-size: 1.1rem;
-}
-
-.framVisningBakgrun {
-
-    width: 700px;
-    height: 700px;
-    border-radius: 100px;
-   
-}
-
-.portefølje {
-
-    margin-top: 20rem;
-
-}
-
-/*section 1*/
-.wrapper1 {
-
-    margin-left: 5%;
-    margin-right: 5%;
-    transition: 1s;
-    opacity: .99;
-      
-}
-
-
-#secProsjekter > div:nth-child(odd) {
-
-    display: grid;
-    grid-template-columns: 400px auto auto;
-    grid-gap: 9rem;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    left: 50%;
-    margin-left: -560px;
-    /* grid-gap: 12rem; */
-    /* justify-content: center; */
-    /* align-content: center; */
-
-
-
-    /*
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    /* grid-template-columns: 350px 100px 1fr; */
-    /* grid-gap: 12rem; */
-    /* justify-content: center; */
-    /* align-content: center; */
-  /*  position: absolute;
-    /* top: 1000px; */
-
-}
-
-/*
-
-#secProsjekter > div:nth-child(odd) {
-
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        /* grid-template-columns: 350px 100px 1fr; */
-        /* grid-gap: 12rem; */
-        /* justify-content: center; */
-        /* align-content: center; 
-        position: absolute;
-        /* top: 1000px; 
-
-}
- 
-*/
-
-
-#secProsjekter > div:nth-child(odd) .framVisningBakgrun {
-
-   /* border: 3px solid #6FACDD; */
-    background-color: #6FACDD;
-    transform: rotate(45deg);
-    top: -47rem;
-    left: 53rem;
-    z-index: -1;
-    position: relative;
-   
-  
-}
-
-#secProsjekter > div:nth-child(odd) .beskrivelseAvProsjekt {
-
-    max-width: 600px;
-
-}
-
-
-#secProsjekter > div:nth-child(odd) h3 {
-
-
-}
-
-#secProsjekter > div:nth-child(odd) h2 {
-/*
-    top: -50px;
-    left: 32px;
-  */
-}
-
-.wrapper1:nth-child(odd) img {
-
- 
-  
-
-}
-
-
-
-
-/*her begynner section 2 / speilvent */
-
-#secProsjekter > div:nth-child(2) {
-
-
-    display: grid;
-    grid-template-columns: 400px auto auto;
-    grid-gap: 9rem;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    left: 50%;
-    margin-left: -560px;
-
-    top: 2000px;
-   
-
-}
-
-#secProsjekter > div:nth-child(even) .framVisningBakgrun {
-
-    background-color: #DDBF6F;
-    top: -23rem;
-    left: -7rem;
-
-    transform: rotate(45deg);
-    z-index: 1;
-    position: relative;
-
-    
-
-}
-
-#secProsjekter > div:nth-child(even) .beskrivelseAvProsjekt {
-/*
-    position: absolute;
-    width: 400px;
-    left: 60rem;
-    margin-top: 24rem;
-*/
-}
-
-
-#secProsjekter > div:nth-child(even) h3 {
-
-    margin-top: 15rem;
-    text-align: end; 
-
-}
-
-
-#secProsjekter > div:nth-child(even) p {
-
-    text-align: end; 
-
-}
-
-#secProsjekter > div:nth-child(even) h2 {
-
-    top: -100px;
-    left: -92px;
-
-}
-
-.wrapper1:nth-child(even) .framvisningAvprosjekt img {
-
-    margin-top: 12rem;
-    width: 90%;
-
-}
-
-.wrapper1:nth-child(even) > div:nth-child(1) {
-    
-    order: 2;
-    
-}
-.wrapper1:nth-child(even) > div:nth-child(2) {
-    
-    order: 1;
-    
-}
-
-.wrapper1:nth-child(even) > div:nth-child(3) {
-    
-    order: 1;
-    
-}
-
-/*hentes ikke fra database*/
-
-.s4 {
-
-    border: 1px solid #9C9C9C;
-    background-image: url("img/bildeAvMeg.png");
-    background-position: center;
-    border-radius: 250px;
-    padding: 100px;
-    width: 250px;
-    height: 250px;
-    margin: auto;
-    margin-bottom: 10rem;
-
-}
-
-.omMeg {
-
+    font-weight: 300;
+    font-size: 3rem;
+    margin: 0;
     text-align: center;
-    color: white;
-    margin-top: 15rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+
+}
+
+
+.s2 {
+
+    /*margin-top: 10rem;*/
+    /*margin-bottom: 10rem;*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+
+}
+
+
+.one {
+    background-image: url("img/hemsedal.jpg");
+    background-position: center;
+    background-size: cover;
+
+
+    background-color: bisque;
+    height: 500px;
+    width: 700px;
+   
+}
+
+.one > h3 {
+
     
+
+}
+
+.two {
+
+    background-image: url("img/fairtrade.svg");
+    background-position: center;
+
+
+    background-color: bisque;
+    height: 500px;
+    width: 700px;
     
 }
 
-.omMeg h4 {
+.three {
 
-    margin: 0;
-    font-size: 1.5rem
+    background-image: url("img/eggTimer.svg");
+    background-position: center;
+
+  
+    background-color: bisque;
+    height: 500px;
+    width: 700px;
     
 }
 
-.omMeg p {
+.four {
 
-    margin: 0;
+    background-image: url("img/skogholt.png");
+    background-position: center;
+    background-size: cover;
+
+
+   
+    background-color: bisque;
+    height: 500px;
+    width: 700px;
     
 }
 
 
 
 
-@media only screen and (max-width: 1200px) {
 
-    #secProsjekter > div:nth-child(odd) {
 
-        grid-template-rows: 1fr;
-       /* grid-gap: 9rem; */
-    
-    
-    }
-    
-
-}

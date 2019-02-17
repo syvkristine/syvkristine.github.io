@@ -4,68 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
     <title>Portefølje</title>
 </head>
 <body>
-    <nav>
-        <a href="omMeg/omMeg.html">
-            <img data-aos="zoom-in" data-aos-duration="2000" class="logo" src="./img/" alt="">
-        </a>
-        <a data-aos="fade-left" data-aos-duration="2000" data-aos-delay="400" href="#ommeg">Kontakt</a>
-        <a data-aos="fade-left" data-aos-duration="2000" data-aos-delay="400" href="./admin/admin.html">logg inn</a>
+ <div class="bacgorundsimage"> 
+    <nav role="navigation">
+        <div id="menuToggle">
+
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+        
+            <ul id="menu">
+                <a href="#"><li>Hjem</li></a>
+                <a href="#"><li>Om meg</li></a>
+                <a href="#"><li></li></a>
+            </ul>
+        </div>
     </nav>
 
     <main>
-        <section class="portefølje">
-            <h1 data-aos="fade-down" data-aos-easing="ease-in-out" data-aos-duration="1500" data-aos-delay="2000" >Portefølje</h1>
-            <div class="tidsLinje"></div>
+        <div></div>
+        <section class="s1">
+            <h1>Interaksjonsdesigner</h1>
+            <p>Hei, jeg heter Kristine og tar utfordinger på strak arm. For tiden
+                studerer 2.året interaksjonsdesign og er ferdig sommeren 2019. 
+            </p>
         </section>
-        
 
+    </div>  
 
-
-        <section id="secProsjekter">
-            <!--Her legger alle proskjektene seg inn fra databasen og publisering-->
-            
-        </section>    
-
-
-
-
-        <section>
-                <div data-aos="zoom-in" data-aos-duration="2000"class="s4">
-                        <div id="ommeg" class="omMeg">
-                            <h4>Kristine Fossum</h4>
-                            <p>93kristine@live.no</p>
-                        </div>
+        <h2>Portefølje</h2>
+        <section class="s2">
+                <div class="one">
+                    <!--<h3>Bergans</h3>-->
                 </div>
+                <div class="two"></div>
+                <div class="three"></div>
+                <div class="four"></div>
         </section>
+
+        <section class="s3">
+       
+        </section>
+
+
     </main>
-
-        
-    <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
-    <script>
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyDGiXBXjdSyNKhK6FAkOCI_L91GhMTyPp8",
-        authDomain: "portfolio-a6ec0.firebaseapp.com",
-        databaseURL: "https://portfolio-a6ec0.firebaseio.com",
-        projectId: "portfolio-a6ec0",
-        storageBucket: "portfolio-a6ec0.appspot.com",
-        messagingSenderId: "183671780214"
-    };
-    firebase.initializeApp(config);
-    </script>
-
-    <script src="index.js"></script>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-
-
+    
 </body>
 </html>
