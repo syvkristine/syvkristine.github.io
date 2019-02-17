@@ -22,11 +22,11 @@ a {
   color: #232323;
   transition: color 0.3s ease;
 
-}
+} 
 
 a:hover {
 
-  color: pink;
+  color: rgb(168, 96, 108);
 
 }
 
@@ -41,6 +41,7 @@ a:hover {
   
   -webkit-user-select: none;
   user-select: none;
+  position: fixed;
 
 }
 
@@ -139,7 +140,7 @@ a:hover {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    margin: -100px 0 0 -50px;
+    margin: -100px 0 0 -80px;
     padding: 50px;
     padding-top: 125px;
     
@@ -208,46 +209,104 @@ h2 {
 
 }
 
+.s2 span {
 
-.s2 img {
-
-    width: 60%;
-    /*margin-top: 10rem;*/
-    /*margin-bottom: 10rem;*/
-  /*  display: flex;
-    flex-flow: row wrap;
-    justify-content: center; */
-
+    font-size: 3rem;
+   
 
 }
 
+.s2 h3 {
+
+    font-size: 3rem;
+    font-weight: 500;
+
+}
+
+.s2 p {
+
+    font-size: 1rem;
+
+}
+
+
+/*Her begynner første prosjekt*/
 
 .one {
    
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 500px;  
    
 }
 
-.one > h3 {
+.one .tekstfelt {
 
-    
+    padding: 10rem 0 0 0;
+   
+
 
 }
+
+.one a {
+
+    text-decoration-line: underline;
+    
+}
+
+/*Her begynner prosjekt nr 2 */
 
 .two {
 
+    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: 500px 1fr;  
+
    
 }
 
+.two .tekstfelt{
+
+
+    padding: 10rem 0 0 3rem;
+}
+
+
+
+/*Her begynner prosjekt nr 3 */
 .three {
 
-  
+    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: 1fr 500px;  
     
 }
 
+
+
+.three .tekstfelt{
+
+
+    padding: 10rem 0 0 3rem;
+}
+
+
+/*Her begynner prosjekt nr 4 */
 .four {
 
+    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: 500px 1fr;  
 
     
+}
+
+
+.four .tekstfelt{
+
+
+    padding: 10rem 0 0 3rem;
+
 }
 
 
