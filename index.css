@@ -8,6 +8,7 @@ body {
     font-family: 'Montserrat Alternates', sans-serif;
     font-size: 100%;
     color: black;
+    user-select: none;
 
     overflow-y: scroll;
     overflow-x: hidden;
@@ -160,21 +161,12 @@ a:hover {
 
 }
 
-/*
- * And let's slide it in from the left
- */
+/*And let's slide it in from the left*/
 #menuToggle input:checked ~ ul {
 
   transform: none;
 
 }
-
-
-
-
-
-
-
 
 
 
@@ -217,27 +209,21 @@ h2 {
 }
 
 
-.s2 {
+.s2 img {
 
+    width: 60%;
     /*margin-top: 10rem;*/
     /*margin-bottom: 10rem;*/
-    display: flex;
+  /*  display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: center; */
 
 
 }
 
 
 .one {
-    background-image: url("img/hemsedal.jpg");
-    background-position: center;
-    background-size: cover;
-
-
-    background-color: bisque;
-    height: 500px;
-    width: 700px;
+   
    
 }
 
@@ -249,39 +235,18 @@ h2 {
 
 .two {
 
-    background-image: url("img/fairtrade.svg");
-    background-position: center;
-
-
-    background-color: bisque;
-    height: 500px;
-    width: 700px;
-    
+   
 }
 
 .three {
 
-    background-image: url("img/eggTimer.svg");
-    background-position: center;
-
   
-    background-color: bisque;
-    height: 500px;
-    width: 700px;
     
 }
 
 .four {
 
-    background-image: url("img/skogholt.png");
-    background-position: center;
-    background-size: cover;
 
-
-   
-    background-color: bisque;
-    height: 500px;
-    width: 700px;
     
 }
 

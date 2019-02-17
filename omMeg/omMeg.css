@@ -5,9 +5,9 @@ html, body {
     padding: 0;
     margin: 0;
     font-size: 100%;
-    background-color: rgba(48,48,48,1);
-    color: #9C9C9C;
-    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+    color: black;
+    font-family: 'Montserrat Alternates', sans-serif;
     user-select: none;
 }
 
