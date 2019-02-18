@@ -230,7 +230,77 @@ h2 {
 }
 
 
-/*Her begynner første prosjekt*/
+/*Her begynner prosjektene*/
+
+.s2 {
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+
+}
+
+
+
+.one {
+    
+    background-image: url("img/hemsedal.jpg");
+    background-position: center;
+    background-size: cover;
+
+
+  
+    height: 500px;
+    width: 700px;
+   
+}
+
+
+
+.two {
+
+    background-image: url("img/fairtrade.svg");
+    background-position: center;
+
+
+   
+    height: 500px;
+    width: 700px;
+    
+}
+
+.three {
+
+    background-image: url("img/eggTimer.svg");
+    background-position: center;
+
+  
+    
+    height: 500px;
+    width: 700px;
+    
+}
+
+.four {
+
+    background-image: url("img/skogholt.png");
+    background-position: center;
+    background-size: cover;
+
+
+   
+
+    height: 500px;
+    width: 700px;
+    
+}
+
+
+
+
+
+/*
 
 .one {
    
@@ -254,7 +324,7 @@ h2 {
     
 }
 
-/*Her begynner prosjekt nr 2 */
+
 
 .two {
 
@@ -273,7 +343,7 @@ h2 {
 
 
 
-/*Her begynner prosjekt nr 3 */
+
 .three {
 
     margin-top: 10rem;
@@ -291,7 +361,7 @@ h2 {
 }
 
 
-/*Her begynner prosjekt nr 4 */
+
 .four {
 
     margin-top: 10rem;
@@ -310,7 +380,7 @@ h2 {
 }
 
 
-
+*/
 
 
 
