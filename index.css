@@ -16,19 +16,21 @@ body {
 }
 
 
-a {
+#menu a {
 
   text-decoration: none;
-  color: #232323;
-  transition: color 0.3s ease;
+  position: relative;
+  color: #000000;
+  transition: .3s ease;
 
 } 
 
-a:hover {
+#menu a:hover {
 
   color: rgb(168, 96, 108);
 
 }
+
 
 #menuToggle {
 
@@ -36,14 +38,13 @@ a:hover {
   position: relative;
   top: 50px;
   left: 72px;
-  
   z-index: 1;
-  
   -webkit-user-select: none;
   user-select: none;
   position: fixed;
 
 }
+
 
 #menuToggle input {
 
@@ -53,9 +54,7 @@ a:hover {
   position: absolute;
   top: -7px;
   left: -5px;
-  
   cursor: pointer;
-  
   opacity: 0; /* hide this */
   z-index: 2; /* and place it over the hamburger */
   
@@ -63,9 +62,7 @@ a:hover {
 
 }
 
-/*
- * Just a quick hamburger
- */
+/*hamburger meny*/
 #menuToggle span {
 
   display: block;
@@ -73,18 +70,15 @@ a:hover {
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  
   background: black;
   border-radius: 3px;
-  
   z-index: 1;
-  
   transform-origin: 4px 0px;
-  
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               opacity 0.55s ease;
 }
+
 
 #menuToggle span:first-child {
 
@@ -98,21 +92,16 @@ a:hover {
 
 }
 
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
+/*gjør om hamburger menu til kryss*/
 #menuToggle input:checked ~ span {
 
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
+  background: #000000;
 
 }
 
-/*
- * But let's hide the middle one.
- */
+/*gjemmer den i midten*/
 #menuToggle input:checked ~ span:nth-last-child(3) {
 
   opacity: 0;
@@ -120,38 +109,29 @@ a:hover {
 
 }
 
-/*
- * Ohyeah and the last one should go the other direction
- */
+/*roterer andre veien*/
 #menuToggle input:checked ~ span:nth-last-child(2) {
 
   transform: rotate(-45deg) translate(0, -1px);
 
 }
 
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
+/*meny som åpner seg*/
 #menu {
 
     overflow: hidden;  
-
     position: absolute;
     width: 100vw;
     height: 100vh;
     margin: -100px 0 0 -80px;
     padding: 50px;
     padding-top: 125px;
-    
     background: white;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
-    /* to stop flickering of text in safari */
-    
+
     transform-origin: 0% 0%;
     transform: translate(-100%, 0);
-    
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
@@ -162,7 +142,6 @@ a:hover {
 
 }
 
-/*And let's slide it in from the left*/
 #menuToggle input:checked ~ ul {
 
   transform: none;
@@ -171,12 +150,12 @@ a:hover {
 
 
 
+/*section 1*/
 .s1 {
 
     margin-top: 20rem;
     height: 500px;
     padding-left: 5%;
-    /*top: 350px;*/
   
     
 }
@@ -209,23 +188,51 @@ h2 {
 
 }
 
-.s2 span {
+/*Tekst til felles på nettsiden*/
 
-    font-size: 3rem;
-   
-
-}
 
 .s2 h3 {
 
-    font-size: 3rem;
+    padding-top: 30%;
+    font-size: 2rem;
+    margin: 0;
     font-weight: 500;
+    font-family: 'avenir next';
 
 }
 
 .s2 p {
 
     font-size: 1rem;
+
+}
+
+
+.s2 .tekstfelt {
+
+    text-align: center;
+    color: white;
+    opacity: 0;
+    height: 500px;
+    width: 700px;
+    transition: 1.5s ease-out;
+}
+
+.tekstfelt a {
+
+    color: rgb(252, 252, 252);
+    transition: 1.5s ease-out;
+}
+
+.tekstfelt a:hover {
+
+    color: rgb(109, 109, 109);
+}
+
+.s2 .tekstfelt:hover {
+
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.664);
 
 }
 
@@ -243,14 +250,12 @@ h2 {
 
 
 
-.one {
-    
+.s2 .one {
+
     background-image: url("img/hemsedal.jpg");
     background-position: center;
     background-size: cover;
 
-
-  
     height: 500px;
     width: 700px;
    
@@ -258,10 +263,13 @@ h2 {
 
 
 
-.two {
+
+
+.s2 .two {
 
     background-image: url("img/fairtrade.svg");
     background-position: center;
+  
 
 
    
@@ -270,10 +278,11 @@ h2 {
     
 }
 
-.three {
+.s2 .three {
 
     background-image: url("img/eggTimer.svg");
     background-position: center;
+   
 
   
     
@@ -282,7 +291,7 @@ h2 {
     
 }
 
-.four {
+.s2 .four {
 
     background-image: url("img/skogholt.png");
     background-position: center;
@@ -295,6 +304,7 @@ h2 {
     width: 700px;
     
 }
+
 
 
 
