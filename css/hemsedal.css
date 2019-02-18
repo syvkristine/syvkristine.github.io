@@ -144,3 +144,76 @@ body {
   transform: none;
 
 }
+
+
+
+
+
+/*section 2 */
+
+.s2 {
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+
+.s2 div {
+
+  width: 1000px;
+  padding-bottom: 5rem;
+
+}
+
+.s2 h1 {
+
+  font-size: 5rem;
+  margin: 0;
+  font-weight: 200;
+  position: absolute;
+  top: 625px;
+  color: rgb(0, 0, 0);
+  opacity: .7;
+
+
+}
+
+.s2 h2 {
+  
+  padding-top: 10rem;
+  font-size: 2rem;
+  font-weight: 200;
+
+}
+
+.s2 p {
+
+  line-height: 25px;
+  padding-bottom: 3rem;
+
+}
+
+.bildeAvNettside {
+
+  background-image: url("../img/bergansmouckup.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 500px;
+
+
+}
+
+.bergansmocup {
+
+  width: 100%;
+
+}
+
+
+
+

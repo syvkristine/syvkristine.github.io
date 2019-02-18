@@ -144,3 +144,61 @@ body {
   transform: none;
 
 }
+
+
+
+
+/*section 2 */
+
+.s2 {
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+
+.s2 div {
+
+  width: 1000px;
+  padding-bottom: 5rem;
+
+}
+
+.s2 h1 {
+
+  font-size: 5rem;
+  margin: 0;
+  font-weight: 200;
+  position: absolute;
+  top: 673px;
+  color: rgb(0, 0, 0);
+  opacity: .7;
+
+
+}
+
+.s2 h1 span {
+
+  color: white; 
+  padding-bottom: 1rem;
+  
+}
+
+.s2 p {
+
+  line-height: 25px;
+
+}
+
+.s2 .linkgit {
+
+    display: block;
+
+    text-align: end;
+
+
+}
