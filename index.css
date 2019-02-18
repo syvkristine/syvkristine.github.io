@@ -162,7 +162,7 @@ body {
 
 .s1 h1 {
 
-    font-weight: 300;
+    font-weight: 400;
     font-size: 3.5rem;
     margin: 0;
 
@@ -179,7 +179,7 @@ body {
 
 h2 {
 
-    font-weight: 300;
+    font-weight: 400;
     font-size: 3rem;
     margin: 0;
     text-align: center;
@@ -189,6 +189,13 @@ h2 {
 }
 
 /*Tekst til felles på nettsiden*/
+
+
+.s2 {
+
+    margin-bottom: 10rem;
+
+}
 
 
 .s2 h3 {
